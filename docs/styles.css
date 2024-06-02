@@ -14,3 +14,11 @@
 .color-bg{
     color: rgb(127, 255, 155);
 }
+
+.color-bg-txt{
+    background-color: rgb(253, 255, 147);
+}
+
+.text-color-black{
+    color: rgb(0, 0, 0);
+}
