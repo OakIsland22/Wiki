@@ -1,8 +1,10 @@
 
 .color-txt-img{
-  color: rgb(0, 0, 0);
+  color: black;
 }
-
+.color-txt-img{
+  color: black;
+}
 .quitar-linea {
   text-decoration: none;
 }
