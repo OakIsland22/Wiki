@@ -2,6 +2,8 @@
 
 Este es un repositorio donde se tendra la **Wiki**
 
+La Wiki es sobre los deportes, sus características,etc.
+
  Juan Daniel Primavera Garía
 
 ---
