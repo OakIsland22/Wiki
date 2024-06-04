@@ -3,12 +3,289 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Articulos de Deportes</title>
+    <title>Wiki Articulos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="icon" href="/docs/IMG/Logo Completo.png" type="Imagen">
+    <link rel="stylesheet" href="/docs/CSS/styles-articulos.css">
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top bg-body-tertiary"id="navbar" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+          src="/docs/IMG/Logo oak.png"
+          alt="Logo oak"
+          height="24"
+        />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="row collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#top">ARTICULOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#top">ACERCA DE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/docs/">DEPORTES</a>
+            </li>
+            <li class="nav-item navbar-nav mb-2 mb-lg-0 ms-auto">
+              <a <button type="button" class="btn btn-outline-primary">CREAR UNA CUENTA</button>
+              </a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">INICIAR SESION</a>
+            </li>
+          </ul>
+          <div class="container mt-4">
+            <div>
+                <form class="d-flex" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div id="results"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container">
+      <br>
+      <h1 class="text-center">Descubre Nuestros Artículos Deportivos</h1>
+      <br>
+      <p>
+        Explora una diversa gama de artículos dedicados a 20 deportes diferentes. Desde los más populares como el fútbol y el baloncesto, hasta disciplinas menos conocidas como el bádminton y la escalada, cada artículo ofrece información detallada sobre la historia, las reglas, y las curiosidades de cada deporte. Sumérgete en el mundo del deporte y encuentra tu próxima pasión.
+      </p>
+      <br>
+      <!-- 1 Articulo Futbol -->
+      <div class="container mt-5">
+        <a href="todos/futbol.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://www.tudn.com/api/image/x/us/futbol" class="card-img" alt="Futbol">
+                    <p class="card-text mb-0"><h3>Futbol.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 2 Articulo Natacion -->
+      <div class="container mt-5">
+        <a href="todos/natacion.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://www.aquara.com.mx/wp-content/uploads/2015/04/Natacion.jpg" class="card-img" alt="Natacion">
+                    <p class="card-text mb-0"><h3>Natacion.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 3 Articulo Basquetbol -->
+      <div class="container mt-5">
+        <a href="todos/basquetbol.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://s1.significados.com/foto/depositphotos-70826925-s-2019_bg.jpg?class=article" class="card-img" alt="Basquetbol">
+                    <p class="card-text mb-0"><h3>Basquetbol.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 4 Articulo Ciclismo -->
+      <div class="container mt-5">
+        <a href="todos/csiclismo.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://a.storyblok.com/f/112937/568x464/c7971716ed/top-cycling-terms-to-watch-the-tour-de-france_568x464.jpg/m/620x0/filters:quality(70)/" class="card-img" alt="Ciclismo">
+                    <p class="card-text mb-0"><h3>Ciclismo.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 5 Articulo Futbol americano -->
+      <div class="container mt-5">
+        <a href="todos/futbol-americano.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://www.record.com.mx/sites/default/files/articulos/2024/02/10/americano_1.jpg" class="card-img" alt="Futbol Americano">
+                    <p class="card-text mb-0"><h3>Futbol Americano.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 6 Articulo Béisbol. -->
+      <div class="container mt-5">
+        <a href="todos/beisbol.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://cloudfront-us-east-1.images.arcpublishing.com/bloomberglinea/RTOM2XKFUVGLFGDDIQZGPB6B5E.jpg" class="card-img" alt="Béisbol">
+                    <p class="card-text mb-0"><h3>Béisbol.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 7 Articulo Tenis -->
+      <div class="container mt-5">
+        <a href="todos/tenis.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://s3.abcstatics.com/media/bienestar/2019/08/02/tenis-abecedario-kgNF--1248x698@abc.jpg" class="card-img" alt="Tenis">
+                    <p class="card-text mb-0"><h3>Tenis.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 8 Articulo Atletismo -->
+      <div class="container mt-5">
+        <a href="todos/atletismo.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://t1.uc.ltmcdn.com/es/posts/8/2/4/las_pruebas_de_atletismo_mas_comunes_19428_orig.jpg" class="card-img" alt="Atletismo">
+                    <p class="card-text mb-0"><h3>Atletismo.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 9 Articulo Gimnasia -->
+      <div class="container mt-5">
+        <a href="todos/gimnasia.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://powercenterxanat.com/wp-content/uploads/2022/07/53774-1024x577.jpeg" class="card-img" alt="Gimnasia">
+                    <p class="card-text mb-0"><h3>Gimnasia.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 10 Articulo Deportes de Combate -->
+      <div class="container mt-5">
+        <a href="todos/deportes-de-conbate.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://s3.amazonaws.com/s3.timetoast.com/public/uploads/photo/19746115/image/medium-7df8fa28d978fafebeca7264cf5a6065.jfif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJB6ZCNNAN7BE7WDQ%2F20240529%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240529T154447Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=fde4c4b905f30fd53a28d81ff747378e525472c3645257c4907e76a80a89bb9d" class="card-img" alt="Deportes de Combate">
+                    <p class="card-text mb-0"><h3>Deportes de Combate.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 11 Articulo Deportes de Invierno -->
+      <div class="container mt-5">
+        <a href="todos/deportes-de-invierno.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://t1.uc.ltmcdn.com/es/posts/8/4/9/esqui_52948_0_600.jpg" class="card-img" alt="Deportes de Invierno">
+                    <p class="card-text mb-0"><h3>Deportes de Invierno.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 12 Articulo Deportes Extremos -->
+      <div class="container mt-5">
+        <a href="todos/deportes-extremos.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://cdn-3.expansion.mx/dims4/default/e9569be/2147483647/resize/1280x/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fe6%2F1a%2Fc260f8f54ce390305d0ff3cad6f1%2Fdeportes-extremos.jpg" class="card-img" alt="Deportes Extremos">
+                    <p class="card-text mb-0"><h3>Deportes Extremos.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 13 Articulo Deportes Acuáticos -->
+      <div class="container mt-5">
+        <a href="todos/deportes-acuaticos.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_350,q_75,w_525/v1/clients/loscabosmx/Hydro_FlyBoard_2_537e4e2d-f18c-4e23-9edf-22f386777af9.jpg" class="card-img" alt="Deportes Acuáticos">
+                    <p class="card-text mb-0"><h3>Deportes Acuáticos.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 14 Articulo Deportes de Motor -->
+      <div class="container mt-5">
+        <a href="todos/deportes-de-motor.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Rossi_Marquez_Vinales_2016.jpg" class="card-img" alt="Deportes de Motor">
+                    <p class="card-text mb-0"><h3>Deportes de Motor.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 15 Articulo Deportes de Raqueta -->
+      <div class="container mt-5">
+        <a href="todos/deportes-de-raqueta.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://estadiosanti.wordpress.com/wp-content/uploads/2017/02/zx_phixr-1.jpg?w=700" class="card-img" alt="Deportes de Raqueta">
+                    <p class="card-text mb-0"><h3>Deportes de Raqueta.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- 16 Articulo Deportes Adaptados -->
+      <div class="container mt-5">
+        <a href="todos/deportes-adaptados.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLVsSHHubtYgnoN2F8hLice42SSsFrrgnfSw&s" class="card-img" alt="Deportes Adaptados">
+                    <p class="card-text mb-0"><h3>Deportes Adaptados.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- Articulo Deportes Tradicionales -->
+      <div class="container mt-5">
+        <a href="todos/deportes-tradicionales.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDolcFR4azkcGFStLs_M-jH9oXKEIHwGVGlg&s" class="card-img" alt="Deportes Tradicionales">
+                    <p class="card-text mb-0"><h3>Deportes Tradicionales.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- Articulo Esports -->
+      <div class="container mt-5">
+        <a href="todos/esports.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://www.24-horas.mx/wp-content/uploads/2024/01/MEDIDAS-PARA-WEB-2024-01-22T150043.333.png?w=1200" class="card-img" alt="Esports">
+                    <p class="card-text mb-0"><h3>E-Sports.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- Articulo Deportes de Ocio y Recreación -->
+      <div class="container mt-5">
+        <a href="todos/Ocio.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="https://www.lifeder.com/wp-content/uploads/2018/04/paseo-en-bicicleta-lifeder-min-1024x614.jpg" class="card-img" alt="Deportes de Ocio y Recreación">
+                    <p class="card-text mb-0"><h3>Deportes de Ocio y Recreación.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+      <!-- Articulo Deportes de Aventura -->
+      <div class="container mt-5">
+        <a href="todos/aventura.html" class="text-decoration-none">
+            <div class="card">
+                <div class="card-body">
+                    <img src="Deportes de Aventura" class="card-img" alt="Deportes de Aventura">
+                    <p class="card-text mb-0"><h3>Deportes de Aventura.</h3></p>
+                </div>
+            </div>
+        </a>
+    </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <a href="#top" id="scrollBtn">Inicio</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/docs/Js/scripts-articulos.js"></script>
   </body>
 </html>
