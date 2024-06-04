@@ -1,22 +1,28 @@
 const data = [
     { text: "Introducción", id: "introduccion" },
     { text: "Deportes mas Reconocidos", id: "deportes-mas-reconocidos" },
-    { text: "Futbol", id: "FUTBOL" },
-    { text: "Natacion", id: "NATACION" },
-    { text: "Basquetbol", id: "BASQUETBOL" },
-    { text: "Ciclismo", id: "CICLISMO" },
-    { text: "Futbol Americano", id: "FUTBOL-AMERICANO" },
     { text: "Importancia del Deporte", id: "importancia-del-deporte" },
+    { text: "Historia del Deporte.", id: "historia" },
+    { text: "El Deporte en la Actualidad", id: "el-deporte-en-la-actualidad" },
+    { text: "Valores y Ética en el Deporte", id: "valores" },
+    { text: "Impacto Cultural y Social del Deporte", id: "impacto" },
+    { text: "Futbol Americano", id: "FUTBOL-AMERICANO" },
+    { text: "El Futuro del Deporte", id: "futuro" },
+    { text: "Sigueme", id: "sigueme" },
+    { text: "Juegos", id: "juegos" },
+    { text: "Empresa", id: "empresa" },
 ];
 
 const mainOptions = [
     { text: "Deportes mas Reconocidos", id: "deportes-mas-reconocidos" },
-    { text: "Opción Principal 2", id: "content2" },
-    { text: "Opción Principal 3", id: "content3" }
+    { text: "Importancia del Deporte", id: "importancia-del-deporte" },
+    { text: "El Deporte en la Actualidad", id: "el-deporte-en-la-actualidad" },
+    { text: "Valores y Ética en el Deporte", id: "valores" },
 ];
 
 const searchInput = document.getElementById('searchInput');
         const resultsContainer = document.getElementById('results');
+        let lastQuery = '';
 
         searchInput.addEventListener('focus', function() {
             showMainOptions();
@@ -24,17 +30,17 @@ const searchInput = document.getElementById('searchInput');
 
         searchInput.addEventListener('blur', function() {
             setTimeout(function() {
-                resultsContainer.innerHTML = ''; // Ocultar resultados cuando se pierde el foco
+                resultsContainer.innerHTML = ''; /* Ocultar resultados cuando se pierde el foco */
             }, 100);
         });
 
         searchInput.addEventListener('input', function() {
             const query = searchInput.value.toLowerCase();
-            resultsContainer.innerHTML = ''; // Limpiar resultados anteriores
+            resultsContainer.innerHTML = ''; /* Limpiar resultados anteriores */
 
             if (query.trim() === '') {
                 showMainOptions();
-                return; // Mostrar opciones principales si el campo de búsqueda está vacío
+                return; /* Mostrar opciones principales si el campo de búsqueda está vacío */
             }
 
             const filteredResults = data.filter(item => item.text.toLowerCase().includes(query));
@@ -51,8 +57,8 @@ const searchInput = document.getElementById('searchInput');
                     resultLink.href = `#${result.id}`;
                     resultLink.tabIndex = -1;
                     resultLink.addEventListener('click', () => {
-                        searchInput.value = ''; // Limpiar el campo de búsqueda
-                        resultsContainer.innerHTML = ''; // Limpiar resultados
+                        searchInput.value = ''; /* Limpiar el campo de búsqueda */
+                        resultsContainer.innerHTML = ''; /* Limpiar resultados */
                     });
                     resultItem.appendChild(resultLink);
                     resultList.appendChild(resultItem);
@@ -62,7 +68,7 @@ const searchInput = document.getElementById('searchInput');
         });
 
         function showMainOptions() {
-            resultsContainer.innerHTML = ''; // Limpiar resultados anteriores
+            resultsContainer.innerHTML = ''; /* Limpiar resultados anteriores */
             const resultList = document.createElement('ul');
             mainOptions.forEach((option) => {
                 const resultItem = document.createElement('li');
@@ -72,8 +78,8 @@ const searchInput = document.getElementById('searchInput');
                 resultLink.href = `#${option.id}`;
                 resultLink.tabIndex = -1;
                 resultLink.addEventListener('click', () => {
-                    searchInput.value = ''; // Limpiar el campo de búsqueda
-                    resultsContainer.innerHTML = ''; // Limpiar resultados
+                    searchInput.value = ''; /* Limpiar el campo de búsqueda */
+                    resultsContainer.innerHTML = ''; /* Limpiar resultados */
                 });
                 resultItem.appendChild(resultLink);
                 resultList.appendChild(resultItem);
@@ -82,12 +88,20 @@ const searchInput = document.getElementById('searchInput');
         }
 
         document.getElementById('searchForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita el envío del formulario
-            searchInput.blur(); // Quitar el foco del campo de búsqueda
+            event.preventDefault(); /* Evita el envío del formulario */
+            searchInput.blur(); /* Quitar el foco del campo de búsqueda */
+            lastQuery = searchInput.value; /* Guardar el valor actual del campo de búsqueda */
+            searchInput.value = ''; /* Limpiar el campo de búsqueda */
+        });
+
+        searchInput.addEventListener('focus', function() {
+            if (searchInput.value !== lastQuery) {
+                searchInput.value = ''; /* Limpiar el campo de búsqueda si se escribe algo nuevo */
+            }
         });
 
 
-        // Cuando el usuario se desplaza 20px desde la parte superior de la página, muestra el botón
+/* Mostrar inicio para regresar */
         window.onscroll = function() {
             scrollFunction();
         };
@@ -100,3 +114,18 @@ const searchInput = document.getElementById('searchInput');
                 scrollBtn.style.display = "none";
             }
         }
+
+/* NavBar ocultar*/
+let lastScrollTop = 0;
+        window.addEventListener("scroll", function() {
+            const navbar = document.getElementById("navbar");
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                // Desplazarse hacia abajo
+                navbar.style.top = "-120px"; 
+            } else {
+                // Desplazarse hacia arriba
+                navbar.style.top = "0";
+            }
+            lastScrollTop = scrollTop;
+        });

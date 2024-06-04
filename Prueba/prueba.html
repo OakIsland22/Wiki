@@ -1,75 +1,131 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ejemplo de Presentación de Información</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Búsqueda</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        .result {
+            cursor: pointer;
+            padding: 5px;
         }
-        .seccion {
-            margin-bottom: 20px;
-        }
-        .seccion h2 {
-            background-color: #f4f4f4;
-            padding: 10px;
-        }
-        .lista {
-            margin-left: 20px;
-        }
-        .tabla {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .tabla, .tabla th, .tabla td {
-            border: 1px solid black;
-        }
-        .tabla th, .tabla td {
-            padding: 8px;
-            text-align: left;
-        }
-        .cuadro {
-            background-color: #e7f3fe;
-            border-left: 6px solid #2196F3;
-            padding: 10px;
-            margin-bottom: 20px;
+
+        .result:hover {
+            background-color: #f1f1f1;
         }
     </style>
 </head>
 <body>
-    <div class="seccion">
-        <h2>Encabezado de Sección</h2>
-        <p>Esta es una sección con información detallada.</p>
+    <div class="container mt-5">
+        <form id="searchForm">
+            <div class="form-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="Buscar...">
+            </div>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </form>
+        <div id="results" class="mt-3"></div>
     </div>
 
-    <div class="seccion">
-        <h2>Lista de Puntos</h2>
-        <ul class="lista">
-            <li>Punto 1</li>
-            <li>Punto 2</li>
-            <li>Punto 3</li>
-        </ul>
-    </div>
+    <script>
+        const data = [
+            { text: "Introducción", id: "introduccion" },
+            { text: "Deportes mas Reconocidos", id: "deportes-mas-reconocidos" },
+            { text: "Importancia del Deporte", id: "importancia-del-deporte" },
+            { text: "Historia del Deporte.", id: "historia" },
+            { text: "El Deporte en la Actualidad", id: "el-deporte-en-la-actualidad" },
+            { text: "Valores y Ética en el Deporte", id: "valores" },
+            { text: "Impacto Cultural y Social del Deporte", id: "impacto" },
+            { text: "Futbol Americano", id: "FUTBOL-AMERICANO" },
+            { text: "El Futuro del Deporte", id: "futuro" },
+        ];
 
-    <div class="seccion">
-        <h2>Tabla de Datos</h2>
-        <table class="tabla">
-            <tr>
-                <th>Encabezado 1</th>
-                <th>Encabezado 2</th>
-                <th>Encabezado 3</th>
-            </tr>
-            <tr>
-                <td>Dato 1</td>
-                <td>Dato 2</td>
-                <td>Dato 3</td>
-            </tr>
-        </table>
-    </div>
+        const mainOptions = [
+            { text: "Deportes mas Reconocidos", id: "deportes-mas-reconocidos" },
+            { text: "Importancia del Deporte", id: "importancia-del-deporte" },
+            { text: "El Deporte en la Actualidad", id: "el-deporte-en-la-actualidad" },
+            { text: "Valores y Ética en el Deporte", id: "valores" },
+        ];
 
-    <div class="cuadro">
-        <p>Este es un cuadro de texto destacado para resaltar información importante.</p>
-    </div>
+        const searchInput = document.getElementById('searchInput');
+        const resultsContainer = document.getElementById('results');
+        let lastQuery = '';
+
+        searchInput.addEventListener('focus', function() {
+            showMainOptions();
+        });
+
+        searchInput.addEventListener('blur', function() {
+            setTimeout(function() {
+                resultsContainer.innerHTML = ''; /* Ocultar resultados cuando se pierde el foco */
+            }, 100);
+        });
+
+        searchInput.addEventListener('input', function() {
+            const query = searchInput.value.toLowerCase();
+            resultsContainer.innerHTML = ''; /* Limpiar resultados anteriores */
+
+            if (query.trim() === '') {
+                showMainOptions();
+                return; /* Mostrar opciones principales si el campo de búsqueda está vacío */
+            }
+
+            const filteredResults = data.filter(item => item.text.toLowerCase().includes(query));
+
+            if (filteredResults.length === 0) {
+                resultsContainer.innerHTML = '<div class="result">No se encontraron resultados</div>';
+            } else {
+                const resultList = document.createElement('ul');
+                filteredResults.forEach((result) => {
+                    const resultItem = document.createElement('li');
+                    const resultLink = document.createElement('a');
+                    resultLink.className = 'result';
+                    resultLink.textContent = result.text;
+                    resultLink.href = `#${result.id}`;
+                    resultLink.tabIndex = -1;
+                    resultLink.addEventListener('click', () => {
+                        searchInput.value = ''; /* Limpiar el campo de búsqueda */
+                        resultsContainer.innerHTML = ''; /* Limpiar resultados */
+                    });
+                    resultItem.appendChild(resultLink);
+                    resultList.appendChild(resultItem);
+                });
+                resultsContainer.appendChild(resultList);
+            }
+        });
+
+        function showMainOptions() {
+            resultsContainer.innerHTML = ''; /* Limpiar resultados anteriores */
+            const resultList = document.createElement('ul');
+            mainOptions.forEach((option) => {
+                const resultItem = document.createElement('li');
+                const resultLink = document.createElement('a');
+                resultLink.className = 'result';
+                resultLink.textContent = option.text;
+                resultLink.href = `#${option.id}`;
+                resultLink.tabIndex = -1;
+                resultLink.addEventListener('click', () => {
+                    searchInput.value = ''; /* Limpiar el campo de búsqueda */
+                    resultsContainer.innerHTML = ''; /* Limpiar resultados */
+                });
+                resultItem.appendChild(resultLink);
+                resultList.appendChild(resultItem);
+            });
+            resultsContainer.appendChild(resultList);
+        }
+
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault(); /* Evita el envío del formulario */
+            searchInput.blur(); /* Quitar el foco del campo de búsqueda */
+            lastQuery = searchInput.value; /* Guardar el valor actual del campo de búsqueda */
+            searchInput.value = ''; /* Limpiar el campo de búsqueda */
+        });
+
+        searchInput.addEventListener('focus', function() {
+            if (searchInput.value !== lastQuery) {
+                searchInput.value = ''; /* Limpiar el campo de búsqueda si se escribe algo nuevo */
+            }
+        });
+    </script>
 </body>
 </html>
