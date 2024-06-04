@@ -3,12 +3,223 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Articulos de Deportes</title>
+    <title>Wiki Basquetbol</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="icon" href="/docs/IMG/Logo Completo.png" type="Imagen">
+    <link rel="icon" href="IMG/Logo Completo.png" type="Imagen">
+    <link rel="stylesheet" href="CSS/css/styles-deportes.css">
   </head>
-  <body>
-    <h1>basquetbol</h1>
+  <body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top bg-body-tertiary"id="navbar" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+          src="IMG/Logo oak.png"
+          alt="Logo oak"
+          height="24"
+        />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="row collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#top">BASQUETBOL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="ariculos.html">ARTICULOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#top">ACERCA DE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">DEPORTES</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                INDICE
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#historia">Historia del Baloncesto.</a></li>
+                <li><a class="dropdown-item" href="#reglas">Reglas Básicas del Baloncesto.</a></li>
+                <li><a class="dropdown-item" href="#nba">NBA: La Liga de Baloncesto Más Prestigiosa.</a></li>
+                <li><a class="dropdown-item" href="#euroliga">Euroliga: La Máxima Competición Europea.</a></li>
+                <li><a class="dropdown-item" href="#estrellas">Estrellas Internacionales del Baloncesto.</a></li>
+                <li><a class="dropdown-item" href="#desarrollo">Desarrollo y Futuro del Baloncesto.</a></li>
+                <li><a class="dropdown-item" href="#conclucion">Conclusión.</a></li>
+              </ul>
+            </li>
+            <li class="nav-item navbar-nav mb-2 mb-lg-0 ms-auto">
+              <a <button type="button" class="btn btn-outline-primary">CREAR UNA CUENTA</button>
+              </a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">INICIAR SESION</a>
+            </li>
+          </ul>
+          <div class="container mt-4">
+            <div>
+                <form class="d-flex" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div id="results"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container">
+      <h1 id="historia" >Baloncesto</h1>
+      <p>El baloncesto es un deporte dinámico y emocionante que ha capturado la atención de millones de aficionados en todo el mundo. Desde sus humildes comienzos en un gimnasio de Massachusetts hasta convertirse en una de las disciplinas deportivas más populares, el baloncesto ha evolucionado significativamente. Este artículo detalla aspectos clave del baloncesto, incluyendo la NBA, la Euroliga, las reglas básicas y las estrellas del deporte.</p>
+      <br>
+      <br>
+      <br>
+      <h3 id="historia" >Historia del Baloncesto</h3>
+      <p>El baloncesto fue inventado en 1891 por el Dr. James Naismith en Springfield, Massachusetts. Buscando una actividad que mantuviera a sus estudiantes activos durante el invierno, Naismith ideó un juego en el que los jugadores intentaban encestar una pelota en una canasta de duraznos. Con el tiempo, las reglas se refinaron y el deporte se expandió rápidamente por Estados Unidos y el mundo.</p>
+    </section>
+    <br>
+    <!-- Carreras -->
+    <section class="container">
+      <div class="card bg-dark text-white">
+        <div class="card-header"><h3 id="reglas">Reglas Básicas del Baloncesto</h3></div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>El baloncesto se juega entre dos equipos de cinco jugadores cada uno en una cancha rectangular con un aro en cada extremo. El objetivo es anotar puntos encestando la pelota en el aro contrario mientras se evita que el equipo rival haga lo mismo. A continuación se presentan algunas reglas básicas del baloncesto:</p>
+            <p>
+              <ul>
+                <li>
+                  Duración del Juego: Un partido profesional de baloncesto consta de cuatro cuartos de 12 minutos cada uno. En competiciones universitarias y muchas internacionales, los partidos se juegan en dos tiempos de 20 minutos.
+                </li>
+                <br>
+                <li>
+                  Puntuación: Un enceste vale dos puntos, excepto cuando se realiza desde detrás de la línea de tres puntos, en cuyo caso vale tres puntos. Los tiros libres, concedidos después de ciertas faltas, valen un punto cada uno.
+                </li>
+                <br>
+                <li>
+                  Movimiento del Balón: Los jugadores deben driblar (botar) el balón mientras se mueven. Una vez que un jugador deja de driblar, no puede volver a hacerlo y debe pasar o lanzar el balón.
+                </li>
+                <br>
+                <li>Faltas: Se cometen faltas personales cuando hay contacto físico ilegal con un oponente. Las faltas técnicas se otorgan por conductas antideportivas.</li>
+                <br>
+                <li>
+                  Violaciones: Incluyen caminar (caminar sin driblar), dobles (driblar el balón con ambas manos o detener y reanudar el dribbling) y tres segundos en la zona restringida (un jugador ofensivo no puede permanecer en el área restringida del equipo contrario por más de tres segundos consecutivos).
+                </li>
+              </ul>
+            </p>
+          </blockquote>
+        </div>
+    </section>
+    <!-- Saltos -->
+    <hr class="container">
+    <section class="container">
+      <div class="card bg-dark text-white">
+        <div class="card-header"><h3 id="nba">NBA: La Liga de Baloncesto Más Prestigiosa</h3></div>
+        <br>
+        <h5>Historia y Evolución</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>La National Basketball Association (NBA) es la liga de baloncesto profesional más prestigiosa del mundo. Fundada en 1946, la NBA ha crecido para incluir 30 equipos divididos en dos conferencias: la Conferencia Este y la Conferencia Oeste. Cada equipo juega 82 partidos en la temporada regular, seguidos de los playoffs, donde los mejores equipos compiten por el campeonato.</p>
+          </blockquote>
+        </div>
+        <h5>Formato de Competición</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>El formato de la NBA incluye una temporada regular en la que cada equipo juega contra otros tanto de su propia conferencia como de la opuesta. Al finalizar la temporada regular, los ocho mejores equipos de cada conferencia avanzan a los playoffs. Los playoffs se juegan en una serie de eliminatorias al mejor de siete partidos, culminando en las Finales de la NBA, donde los campeones de cada conferencia se enfrentan para determinar el campeón de la liga.</p>
+          </blockquote>
+        </div>
+        <h5>Impacto Global</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>La NBA ha tenido un impacto global significativo, promoviendo el baloncesto en todo el mundo. Jugadores internacionales como Dirk Nowitzki, Giannis Antetokounmpo y Luka Dončić han elevado el perfil del baloncesto y han atraído a millones de aficionados fuera de Estados Unidos.</p>
+          </blockquote>
+        </div>
+        <h5>Estrellas de la NBA</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>La NBA ha producido algunas de las figuras deportivas más icónicas de la historia. Jugadores como Michael Jordan, Magic Johnson, Larry Bird, Shaquille O'Neal y Kobe Bryant han dejado una marca indeleble en el deporte. Actualmente, estrellas como LeBron James, Kevin Durant y Stephen Curry continúan elevando el nivel del juego.</p>
+          </blockquote>
+        </div>
+      </div>
+      <hr>
+      <div class="card bg-dark text-white">
+        <div class="card-header"><h3 id="euroliga">Euroliga: La Máxima Competición Europea</h3></div>
+        <br>
+        <h5>Historia y Evolución</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>La Euroliga, también conocida como Turkish Airlines EuroLeague por razones de patrocinio, es la principal competición de baloncesto de clubes en Europa. Fundada en 1958, ha crecido para incluir a los mejores equipos de ligas nacionales europeas. La Euroliga es conocida por su alta competitividad y nivel de juego, atrayendo a muchos jugadores talentosos de todo el mundo.</p>
+          </blockquote>
+        </div>
+        <h5>Formato de Competición</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>La Euroliga presenta un formato de liga regular seguido de playoffs. Durante la temporada regular, 18 equipos compiten en un sistema de todos contra todos, jugando partidos de ida y vuelta. Los ocho mejores equipos avanzan a los playoffs, que consisten en una serie al mejor de cinco. Los ganadores de los playoffs se enfrentan en la Final Four, un evento de eliminación directa que decide al campeón.</p>
+          </blockquote>
+        </div>
+        <h5>Impacto y Popularidad</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>La Euroliga ha ganado popularidad y ha sido fundamental para el desarrollo del baloncesto en Europa. Ha ayudado a elevar el nivel de las ligas nacionales y ha proporcionado una plataforma para que los jugadores europeos muestren su talento antes de dar el salto a la NBA.</p>
+          </blockquote>
+        </div>
+        <h5>Estrellas de la Euroliga
+          </h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>La Euroliga ha sido el escenario de grandes estrellas del baloncesto como Dražen Petrović, Arvydas Sabonis y Dejan Bodiroga. Jugadores contemporáneos como Vassilis Spanoulis, Sergio Llull y Nando de Colo han dejado su huella en la competición.</p>
+          </blockquote>
+        </div>
+        <hr>
+      </div>
+      <div class="card bg-dark text-white">
+        <div class="card-header"><h3 id="estrellas">Estrellas Internacionales del Baloncesto</h3></div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>El baloncesto es un deporte verdaderamente global, y muchas estrellas internacionales han tenido un impacto significativo tanto en sus ligas locales como en escenarios internacionales. Jugadores como Hakeem Olajuwon (Nigeria), Yao Ming (China) y Pau Gasol (España) han demostrado que el talento no tiene fronteras.</p>
+          </blockquote>
+        </div>
+      </div>
+      <div class="card-header"><h3 id="desarrollo">Desarrollo y Futuro del Baloncesto</h3></div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>El baloncesto continúa evolucionando con innovaciones en tácticas, entrenamiento y tecnología. La creciente popularidad del deporte a nivel mundial, impulsada por eventos internacionales como el Mundial de Baloncesto FIBA y los Juegos Olímpicos, asegura un futuro brillante para el baloncesto.</p>
+          </blockquote>
+        </div>
+        <br>
+        <h5>Inclusión y Diversidad
+        </h5>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>El baloncesto ha avanzado significativamente en términos de inclusión y diversidad. La WNBA, fundada en 1996, ha proporcionado una plataforma profesional para las mujeres. Además, iniciativas en todo el mundo están haciendo que el deporte sea más accesible para todos, independientemente de su origen o género.</p>
+        </blockquote>
+      </div>
+      </div>
+      <br>
+      <h5>Impacto Social
+      </h5>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>El baloncesto también ha tenido un impacto social positivo. Programas como "NBA Cares" utilizan el deporte como una herramienta para el cambio social, promoviendo la educación, la salud y el bienestar en comunidades desfavorecidas.</p>
+      </blockquote>
+    </div>
+    </div>
+      <hr>
+      <div class="card bg-dark text-white">
+        <div class="card-header"><h3 id="conclucion">Conclusión</h3></div>
+        <br>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>El baloncesto es mucho más que un deporte; es una pasión que une a personas de diversas culturas y orígenes. Desde las vibrantes arenas de la NBA hasta las intensas competiciones de la Euroliga, el baloncesto continúa capturando la imaginación de millones de aficionados. Con una rica historia y un futuro prometedor, el baloncesto seguirá siendo una fuerza dominante en el mundo del deporte global.</p>
+          </blockquote>
+        <hr>
+      </div>
+    </section>
+    <a href="#top"><h1 class="text-center quitar-lineas ">Regresar al Inicio</h1></a>
+    <br>
+    <br>
+    <a href="#top" id="scrollBtn">Inicio</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="Js/script-beisbol.js"></script>
   </body>
 </html>

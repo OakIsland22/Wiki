@@ -3,12 +3,248 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Articulos de Deportes</title>
+    <title>Wiki Aventura</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="icon" href="docs/IMG/Logo Completo.png" type="Imagen">
+    <link rel="icon" href="IMG/Logo Completo.png" type="Imagen">
+    <link rel="stylesheet" href="CSS/css/styles-deportes.css">
   </head>
-  <body>
-    <h1>aventura</h1>
+  <body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top bg-body-tertiary"id="navbar" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+          src="IMG/Logo oak.png"
+          alt="Logo oak"
+          height="24"
+        />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="row collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#top">AVENTURA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="ariculos.html">ARTICULOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#top">ACERCA DE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">DEPORTES</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                INDICE
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#historia">Historia de los Deportes de Aventura.</a></li>
+                <li><a class="dropdown-item" href="#disciplinas">Disciplinas de Deportes de Aventura.</a></li>
+                <li><a class="dropdown-item" href="#desarrollo">Desarrollo y Futuro de los Deportes de Aventura.</a></li>
+                <li><a class="dropdown-item" href="#conclucion">Conclusión.</a></li>
+              </ul>
+            </li>
+            <li class="nav-item navbar-nav mb-2 mb-lg-0 ms-auto">
+              <a <button type="button" class="btn btn-outline-primary">CREAR UNA CUENTA</button>
+              </a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">INICIAR SESION</a>
+            </li>
+          </ul>
+          <div class="container mt-4">
+            <div>
+                <form class="d-flex" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <div id="results"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container">
+      <h1>Deportes de Aventura</h1>
+      <p>Los deportes de aventura son actividades emocionantes que combinan desafíos físicos con la exploración de entornos naturales espectaculares. Estos deportes no solo ofrecen una experiencia adrenalínica, sino también una conexión profunda con la naturaleza y un sentido de logro personal. Este artículo aborda algunos de los deportes de aventura más populares, como el montañismo, el buceo y el paracaidismo, y explora sus aspectos fundamentales y prácticas seguras.</p>
+    </section>
+    <br>
+    <!-- Carreras -->
+    <section class="container">
+      <div class="card bg-dark text-white">
+        <div class="card-header"><h3 id="historia">Historia de los Deportes de Aventura</h3></div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>Los deportes de aventura han existido en diversas formas desde la antigüedad, cuando las personas buscaban explorar y desafiar los límites de su entorno. Sin embargo, como actividades recreativas organizadas, ganaron popularidad en el siglo XX con el aumento de la movilidad y el interés por el turismo de aventura. La mejora en los equipos y la tecnología ha hecho estos deportes más accesibles y seguros para los entusiastas de todo el mundo.</p>
+          </blockquote>
+        </div>
+    </section>
+    <!-- Saltos -->
+    <hr class="container">
+    <section class="container">
+      <div class="card bg-dark text-white">
+        <div class="card-header"><h3 id="disciplinas">Disciplinas de Deportes de Aventura</h3></div>
+        <br>
+        <h5>Montañismo</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>El montañismo, también conocido como alpinismo, es el deporte de escalar montañas. Combina caminatas, escalada en roca y escalada en hielo, y requiere una gran habilidad técnica, resistencia física y mental.</p>
+          </blockquote>
+        </div>
+        <h5>Aspectos Fundamentales</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>
+              <ul>
+                <li>Equipamiento: El equipo básico incluye botas de montaña, crampones, piolets, cuerdas, arneses y cascos. La ropa adecuada para enfrentar condiciones extremas es crucial.</li>
+                <br>
+                <li>
+                  Técnicas: Los montañistas deben dominar técnicas de escalada en roca y hielo, así como el uso de equipos de seguridad como anclajes y sistemas de aseguramiento.
+                </li>
+                <br>
+                <li>Planificación: La planificación cuidadosa de la ruta, el conocimiento del clima y la preparación para emergencias son esenciales para el éxito y la seguridad.</li>
+              </ul>
+            </p>
+          </blockquote>
+        </div>
+        <h5>Prácticas Seguras</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p><ul>
+              <li>Entrenamiento: Un buen nivel de condición física y experiencia previa en escalada son fundamentales. Cursos de montañismo y entrenamiento en técnicas de rescate son altamente recomendables.</li>
+              <br>
+              <li>
+                Acclimatación: La aclimatación adecuada es vital para prevenir el mal de altura en montañas elevadas. Subir gradualmente y permitir tiempo para que el cuerpo se ajuste a la altitud es crucial.
+              </li>
+              <br>
+              <li>Equipo de Seguridad: Siempre llevar equipo de seguridad y saber cómo usarlo correctamente. Esto incluye dispositivos de comunicación para emergencias.</li>
+            </ul></p>
+          </blockquote>
+        </div>
+        <h5>Buceo</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>El buceo es una actividad subacuática que permite explorar el mundo bajo el agua. Existen diferentes tipos de buceo, incluyendo el buceo recreativo, el buceo técnico y el buceo en cuevas.</p>
+          </blockquote>
+        </div>
+      </div>
+      <h5>Aspectos Fundamentales</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p><ul>
+              <li>Certificación: Los buceadores deben obtener certificaciones a través de organizaciones reconocidas como PADI (Professional Association of Diving Instructors) o SSI (Scuba Schools International).</li>
+              <br>
+              <li>
+                Equipamiento: Incluye máscara, snorkel, aletas, traje de neopreno, chaleco de control de flotabilidad, regulador y tanques de aire o mezcla de gases.
+              </li>
+              <br>
+              <li>Planificación: Conocer el sitio de buceo, las condiciones del agua y los procedimientos de emergencia son esenciales.</li>
+            </ul></p>
+          </blockquote>
+        </div>
+        <h5>Prácticas Seguras</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p><ul>
+              <li>Entrenamiento: Completar cursos de buceo y mantenerse actualizado con la formación continua. Practicar habilidades de emergencia y rescate regularmente.</li>
+              <br>
+              <li>
+                Bucear en Pareja: Siempre bucear con un compañero y realizar controles previos al buceo mutuamente.
+              </li>
+              <br>
+              <li>Control de Flotabilidad: Mantener un control adecuado de la flotabilidad para evitar accidentes y conservar el entorno marino.</li>
+            </ul></p>
+          </blockquote>
+        </div>
+        <h5>Paracaidismo</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>El paracaidismo es el deporte de saltar desde una aeronave y descender a tierra con la ayuda de un paracaídas. Combina la emoción de la caída libre con la destreza técnica del aterrizaje seguro.</p>
+          </blockquote>
+        </div>
+        <h5>Aspectos Fundamentales</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p><ul>
+              <li>Equipamiento: Incluye paracaídas principal y de reserva, altímetro, arnés y casco. Los trajes de vuelo pueden mejorar la estabilidad y el control durante la caída libre.</li>
+              <br>
+              <li>
+                Técnicas de Salto: Los saltos básicos evolucionan a maniobras más avanzadas como la formación en caída libre, saltos con wingsuit y saltos BASE (desde edificios, antenas, puentes y acantilados).
+              </li>
+              <br>
+              <li>Formación: Los paracaidistas deben completar programas de formación inicial como el AFF (Accelerated Freefall) y mantenerse en práctica constante.</li>
+            </ul></p>
+          </blockquote>
+        </div>
+        <h5>Prácticas Seguras</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p><ul>
+              <li>Revisiones de Equipo: Realizar revisiones rigurosas del equipo antes de cada salto. El equipo debe ser mantenido y empaquetado por profesionales certificados.</li>
+              <br>
+              <li>
+                Condiciones Meteorológicas: Saltar solo en condiciones meteorológicas adecuadas. Evitar vientos fuertes, tormentas y otras condiciones adversas.
+              </li>
+              <br>
+              <li>Planificación de Emergencias: Tener un plan de emergencia claro y practicar procedimientos de liberación y despliegue del paracaídas de reserva.</li>
+            </ul></p>
+          </blockquote>
+        </div>
+      <hr>
+      <div class="card bg-dark text-white">
+        <div class="card-header"><h3 id="desarrollo">Desarrollo y Futuro de los Deportes de Aventura</h3></div>
+        <br>
+        <h5>Innovaciones Tecnológicas</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p><ul>
+              <li>Equipos Mejorados: Los materiales ligeros y resistentes como la fibra de carbono y los tejidos técnicos han mejorado la seguridad y el rendimiento del equipo.</li>
+              <br>
+              <li>Tecnología de Navegación: Dispositivos GPS, aplicaciones de seguimiento y sistemas de comunicación han facilitado la planificación y la seguridad en actividades remotas.</li>
+              <br>
+              <li>
+                Cámaras de Acción: Cámaras como GoPro han permitido a los deportistas capturar y compartir sus experiencias, aumentando la visibilidad y el atractivo de estos deportes.
+              </li>
+            </ul></p>
+          </blockquote>
+        </div>
+        <h5>Inclusión y Accesibilidad</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>Los deportes de aventura están cada vez más accesibles a una mayor variedad de personas gracias a programas de iniciación, jornadas de puertas abiertas y actividades organizadas por comunidades locales. Además, el enfoque en la inclusión ha llevado a la creación de equipos y adaptaciones para personas con discapacidades, ampliando el alcance de estos deportes.</p>
+          </blockquote>
+        </div>
+        <h5>Impacto Ambiental</h5>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>Con el aumento de la popularidad de los deportes de aventura, también ha crecido la conciencia sobre el impacto ambiental. Los deportistas y organizaciones están promoviendo prácticas sostenibles, como:</p>
+            <br>
+            <ul>
+              <li>
+                Dejar No Rastro: Fomentar el respeto por la naturaleza y la minimización del impacto ambiental en entornos naturales.
+<li>Conservación de Sitios Naturales: Participar en programas de conservación y limpieza de áreas naturales.</li>
+<li>Educación Ambiental: Promover la educación sobre la importancia de la conservación y el respeto por los entornos naturales.</li>
+              </li>
+            </ul>
+          </blockquote>
+        </div>
+      <div class="card bg-dark text-white">
+        <div class="card-header"><h3 id="conclucion">Conclusión</h3></div>
+        <br>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>Los deportes de aventura ofrecen una emocionante combinación de desafío físico, exploración y conexión con la naturaleza. Desde el montañismo hasta el buceo y el paracaidismo, estos deportes proporcionan experiencias inolvidables y un sentido de logro personal. Con el desarrollo de tecnologías innovadoras, un enfoque en la seguridad y la sostenibilidad, y una creciente inclusividad, los deportes de aventura seguirán inspirando a nuevas generaciones de entusiastas y aventureros de todo el mundo.</p>
+          </blockquote>
+      </div>
+      <hr>
+      <a href="#top"><h1 class="text-center quitar-lineas ">Regresar al Inicio</h1></a>
+      <br>
+      <br>
+    </section>
+    <a href="#top" id="scrollBtn">Inicio</a>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="Js/script-aventura.js"></script>
   </body>
 </html>
